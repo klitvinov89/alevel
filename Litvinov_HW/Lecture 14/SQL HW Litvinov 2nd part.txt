@@ -1,0 +1,43 @@
+Task 1
+
+http://prntscr.com/naj4z6
+
+Select Name from Students GROUP BY Name having AVG(Grade) >= 3.5;
+
+Task 2
+
+http://prntscr.com/naj5on
+
+Select count(*) from Students
+
+Task 3
+
+http://prntscr.com/naj88a
+
+Select Name from students where Name like "J%" Order by Name;
+
+Task 4
+
+http://prntscr.com/najcai
+
+Select SubjCode, Grade from Students Group by SubjCode having max(Grade) Order by SubjCode; 
+
+Task 5
+
+- http://prntscr.com/naks0t 
+select player from goal JOIN game ON (matchid=id) where game.stadium = 'National Stadium, Warsaw'
+- http://prntscr.com/nakv5e
+SELECT DISTINCT player FROM game JOIN goal ON (matchid = id) WHERE teamid!='GER' and (team1='GER' or team2='GER')
+- http://prntscr.com/nakvuh
+SELECT teamname, COUNT(*) FROM eteam JOIN goal ON id=teamid GROUP BY teamname ORDER BY teamname
+- http://prntscr.com/nakvzy
+SELECT stadium, COUNT(*) FROM game JOIN goal ON id=matchid GROUP BY stadium ORDER BY stadium 
+
+Task 6
+
+- http://prntscr.com/nal3y5
+SELECT dept.name, Count(teacher.dept)
+FROM teacher right JOIN dept
+ON (teacher.dept=dept.id)
+GROUP BY dept.name
+

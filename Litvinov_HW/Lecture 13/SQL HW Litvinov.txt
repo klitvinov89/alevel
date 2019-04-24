@@ -1,0 +1,148 @@
+Task 1
+
+http://prntscr.com/n98n6g
+
+CREATE TABLE Teachers(Id integer PRIMARY KEY, Name text);
+
+CREATE TABLE Students(Id integer PRIMARY KEY, Name text, SubjCode text, Grade integer);
+
+CREATE TABLE Subjects(SubjCode text PRIMARY KEY, SubjName text, TeacherId integer);
+
+Taks 2
+
+http://prntscr.com/n98ufo 
+
+
+INSERT INTO Teachers VALUES(1,'Tom Teacher');
+
+INSERT INTO Teachers VALUES(2,'Lucy Teacher');
+
+INSERT INTO Teachers VALUES(3,'Frank Teacher');
+
+INSERT INTO Teachers VALUES(4,'Jane Teacher'); 
+
+INSERT INTO Teachers VALUES(5,'Robert Teacher');
+
+
+
+INSERT INTO Students VALUES(1,'Tom Student', 'Math', 5);
+
+INSERT INTO Students VALUES(2,'Lucy Student', 'Eng', 4);
+
+INSERT INTO Students VALUES(3,'Frank Student', 'Chem', 4);
+
+INSERT INTO Students VALUES(4,'Jane Student', 'Geo', 3);
+
+INSERT INTO Students VALUES(5,'Robert Student', 'Bio', 5);
+
+
+
+INSERT INTO Subjects VALUES('Math', 'Mathematics',1);
+
+INSERT INTO Subjects VALUES('Eng', 'English',2);
+
+INSERT INTO Subjects VALUES('Chem','Chemistry',3);
+
+INSERT INTO Subjects VALUES('Geo', 'Geography',4); 
+
+INSERT INTO Subjects VALUES('Bio', 'Biology',5);
+
+
+
+Task 3
+
+http://prntscr.com/n98sm2
+
+SELECT * FROM Teachers;
+
+SELECT * FROM Students;
+
+SELECT * FROM Subjects;
+
+Task 4
+
+http://prntscr.com/n98yob
+
+INSERT INTO Students VALUES(6,'Sindy Student', 'Math', 5);
+
+INSERT INTO Students VALUES(7,'Wendy Student', 'Eng', 4);
+
+INSERT INTO Students VALUES(8,'Jack Student', 'Chem', 4);
+
+INSERT INTO Students VALUES(9,'Janet Student', 'Geo', 3); 
+
+INSERT INTO Students VALUES(10,'Barak Student', 'Bio', 5);
+
+INSERT INTO Students VALUES(11,'Hillary Student', 'Math', 5);
+
+INSERT INTO Students VALUES(12,'Zak Student', 'Eng', 4);
+
+INSERT INTO Students VALUES(13,'Viktor Student', 'Chem', 4);
+
+INSERT INTO Students VALUES(14,'Archy Student', 'Geo', 3); 
+
+INSERT INTO Students VALUES(15,'Fred Student', 'Bio', 5);
+
+Task 5
+
+http://prntscr.com/n98zgw
+
+Select Name from Students;
+
+Task 6
+
+http://prntscr.com/n991ii
+
+Update Students set Grade = null where ID in (11,12,13,14,15);
+
+
+Select * from Students;
+
+Task 7
+
+http://prntscr.com/n993aq
+
+Select Name from Students where Grade is null;
+
+Task 8
+
+http://prntscr.com/n99e17
+
+ALTER TABLE Students ADD Age integer;
+
+Update Students set Age = 20 where ID in (1,3,5,7,9,11,13);
+
+Update Students set Age = 21 where ID in (2,4,6,8,10);
+
+Update Students set Age = 19 where ID in (12,14);
+
+Select * from Students where age > 19;
+
+Task 9
+
+http://prntscr.com/n99fak
+
+Select * from Students ORDER BY Age asc 
+
+Task 10
+
+http://prntscr.com/n99g77
+
+Select * from Students ORDER BY Age desc; 
+
+Task 11
+
+http://prntscr.com/nalrqx
+
+Select * from Students where Grade is not null ORDER BY Age asc, Name;
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+Generation
+
+http://prntscr.com/nc5mi1
+
+
+CREATE TABLE Authors(Id integer PRIMARY KEY, Name text);
+
+CREATE TABLE Books(Id integer PRIMARY KEY, AuthorId integer, Title text);
+
+
+INSERT INTO Authors VALUES(1,'Tom Author');
+
+INSERT INTO Authors VALUES(2,'Lucy Author');
+
+INSERT INTO Authors VALUES(3,'Frank Author');
+
+INSERT INTO Authors VALUES(4,'Jane Author');
+
+INSERT INTO Authors VALUES(5,'Robert Author');
+
+
+
+INSERT INTO Books VALUES(1,2,'book1');
+
+INSERT INTO Books VALUES(2,1,'book2');
+
+INSERT INTO Books VALUES(3,2,'book3');
+
+INSERT INTO Books VALUES(4,4,'book4');
+
+INSERT INTO Books VALUES(5,5,'book5');
+
+
+
+SELECT * FROM Authors;
+
+
+SELECT * FROM Books;
+
+Task 1
+
+Select * from Authors a,Books b where a.id=b.AuthorId 
+
+http://prntscr.com/nc5r2y
+
+Task 2
+
+http://prntscr.com/nc6eyy
+
+ALTER TABLE Books add Years integer; 
+
+
+update Books set Years = 1990 where id = 1;
+
+update Books set Years = 1980 where id = 2;
+
+update Books set Years = 1970 where id = 3;
+
+update Books set Years = 1960 where id = 4;
+
+update Books set Years = 1950 where id = 5;
+
+
+SELECT * FROM Books
+
+Task 3
+
+http://prntscr.com/nc6flz
+
+Select a.name, b.title from Authors a,Books b where a.id=b.AuthorId and b.Years > (select avg(Years) from Books);
