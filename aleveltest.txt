@@ -1,4 +1,4 @@
-test
+
 GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
 $ git init
 Reinitialized existing Git repository in C:/A-Level/.git/
@@ -78,3 +78,257 @@ Date:   Tue Apr 23 19:56:45 2019 +0300
 
     comment
 
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ ^C
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git commit -m'comment'
+On branch master
+Changes not staged for commit:
+        modified:   aleveltest.txt
+
+no changes added to commit
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   aleveltest.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git diff
+diff --git a/aleveltest.txt b/aleveltest.txt
+index 30d74d2..4effab0 100644
+--- a/aleveltest.txt
++++ b/aleveltest.txt
+@@ -1 +1,80 @@
+-test
+\ No newline at end of file
++test
++GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
++$ git init
++Reinitialized existing Git repository in C:/A-Level/.git/
++
++GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
++$ git status
++On branch master
++
++No commits yet
++
++Untracked files:
++  (use "git add <file>..." to include in what will be committed)
++
++        aleveltest.txt
++
++nothing added to commit but untracked files present (use "git add" to track)
++
++GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
++$ git add aleveltest.txt
++
++GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
++$ git diff
++
++GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
++$ git diff --cashed
++error: invalid option: --cashed
++
++GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
++$ git diff --cached
++diff --git a/aleveltest.txt b/aleveltest.txt
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git commit -m'comment'
+On branch master
+Changes not staged for commit:
+        modified:   aleveltest.txt
+
+no changes added to commit
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git add aleveltest.txt
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git commit -m'comment'
+[master 6b03e3b] comment
+ 1 file changed, 80 insertions(+), 1 deletion(-)
+ rewrite aleveltest.txt (100%)
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git log
+commit 6b03e3bcf4e9dd8bd11f7cbd5e70f220dd68f5bf (HEAD -> master)
+Author: Koss <k.litvinov89@gmail.com>
+Date:   Tue Apr 23 20:22:54 2019 +0300
+
+    comment
+
+commit e54cca7450dba2643a7cc69049a76326966c5309
+Author: Koss <k.litvinov89@gmail.com>
+Date:   Tue Apr 23 19:56:45 2019 +0300
+
+    comment
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/GSAPPS/.ssh/id_rsa):
+Created directory '/c/Users/GSAPPS/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/GSAPPS/.ssh/id_rsa.
+Your public key has been saved in /c/Users/GSAPPS/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:iBwrMIiAgKEYs8vdAWie3sEQKDxG34w/mpanKBvoD48 GSAPPS@DESKTOP-ORPIEMA
+The key's randomart image is:
++---[RSA 2048]----+
+|&+o.             |
+|@@. =            |
+|& =o.+           |
+|.*.+o+..         |
+|o.o.=+. S        |
+|.. o+ .          |
+|o. = .           |
+|o.* o            |
+|oE.+             |
++----[SHA256]-----+
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHIEbsYyyHfqYeY2a3uDSDIpTlwPMbb0mm+DJBVzOapAdUuFGj2glTrzEHFGYUemWtb+qwVG9cQIOfbbdj9tNKVRT+t3fuGPrMaXAQOQC9325l/pcK3a51eDAvYAHMKPc23WdBxHW3jq9YQ5hI09zwVAPJEXvI27tI4eVxA+hfMT70TqKkBNqpE/fYGPMMctow0oYWwEiZeXN7EyoGnR7WoGZPjuSjBtg5zTe6841N2rL0dZI0wrUspceRKfXUM3I9hP5g7SG9ReGGIUiHN8+4o23hnx9NAKvbYUoze9+73dtQlj6dto3Kya1mvi3o5pkfqNnT2GlH7q19NDHAm2w3 GSAPPS@DESKTOP-ORPIEMA
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git remote
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git remote -v
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git remote add origin git@github.com:klitvinov89/alevel.git
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git remote
+origin
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git remote -v
+origin  git@github.com:klitvinov89/alevel.git (fetch)
+origin  git@github.com:klitvinov89/alevel.git (push)
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git push -u origin master
+The authenticity of host 'github.com (140.82.118.4)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+Warning: Permanently added 'github.com,140.82.118.4' (RSA) to the list of known hosts.
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 1.14 KiB | 117.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To github.com:klitvinov89/alevel.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        "\320\233\320\270\321\202\320\262\320\270\320\275\320\276\320\262 \320\232\320\276\320\275\321\201\321\202\320\260\320\275\321\202\320\270\320\275/"
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git add Litvinov_HW/
+warning: LF will be replaced by CRLF in Litvinov_HW/Lecture 13/SQL HW Litvinov.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Litvinov_HW/Lecture 15/SQL HW Part 3.txt.
+The file will have its original line endings in your working directory
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git commit -m"homework"
+[master 4887fd2] homework
+ 23 files changed, 320 insertions(+)
+ create mode 100644 Litvinov_HW/Lecture 1/Litvinov HW.docx
+ create mode 100644 Litvinov_HW/Lecture 11/HomeWork.txt
+ create mode 100644 "Litvinov_HW/Lecture 11/\320\236\321\201\320\276\320\261\320\265\320\275\320\275\320\276\321\201\321\202\320\270 \321\202\320\265\321\201\321\202\320\270\321\200\320\276\320\262\320\260\320\275\320\270\321\217 API.pptx"
+ create mode 100644 "Litvinov_HW/Lecture 12/Students_\320\237\321\200\320\260\320\272\321\202\320\270\320\272\320\260 \320\277\320\276 \321\202\320\265\321\201\321\202\320\270\321\200\320\276\320\262\320\260\320\275\320\270\321\216 \320\220\320\237\320\230.docx"
+ create mode 100644 Litvinov_HW/Lecture 13/SQL Basics (part 1).pptx
+ create mode 100644 Litvinov_HW/Lecture 13/SQL HW Litvinov.txt
+ create mode 100644 Litvinov_HW/Lecture 14/SQL HW Litvinov 2nd part.txt
+ create mode 100644 Litvinov_HW/Lecture 15/SQL HW Part 3.txt
+ create mode 100644 Litvinov_HW/Lecture 2/2019-02-20_1027.swf
+ create mode 100644 Litvinov_HW/Lecture 2/Litvinov CV.html
+ create mode 100644 Litvinov_HW/Lecture 2/Litvinov HW.docx
+ create mode 100644 Litvinov_HW/Lecture 3/Litvinov HW.docx
+ create mode 100644 Litvinov_HW/Lecture 4/Litvinov HW.docx
+ create mode 100644 Litvinov_HW/Lecture 5/Litvinov HW.docx
+ create mode 100644 Litvinov_HW/Lecture 6/Checklist.xlsx
+ create mode 100644 Litvinov_HW/Lecture 6/links.docx
+ create mode 100644 Litvinov_HW/Lecture 7/Litvinov HW.docx
+ create mode 100644 Litvinov_HW/Lecture 7/Slack Test-Cases.xlsx
+ create mode 100644 Litvinov_HW/Lecture 8/AllCombinations.xlsx
+ create mode 100644 Litvinov_HW/Lecture 8/Litvinov HW.xlsx
+ create mode 100644 Litvinov_HW/Lecture 8/Pairwise.xlsx
+ create mode 100644 Litvinov_HW/Test Cases for test.xlsx
+ create mode 100644 Litvinov_HW/Test-case.docx
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git push -u origin master
+Warning: Permanently added the RSA host key for IP address '140.82.118.3' to the list of known hosts.
+Enumerating objects: 40, done.
+Counting objects: 100% (40/40), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (34/34), done.
+Writing objects: 100% (39/39), 29.11 MiB | 3.80 MiB/s, done.
+Total 39 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas: 100% (7/7), done.
+To github.com:klitvinov89/alevel.git
+   6b03e3b..4887fd2  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Litvinov_HW/testfile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
+$ git pull
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From github.com:klitvinov89/alevel
+   4887fd2..4977960  master     -> origin/master
+error: The following untracked working tree files would be overwritten by merge:
+        Litvinov_HW/testfile.txt
+Please move or remove them before you merge.
+Aborting
+Updating 4887fd2..4977960
+
+GSAPPS@DESKTOP-ORPIEMA MINGW64 /c/A-Level (master)
